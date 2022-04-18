@@ -1,0 +1,13 @@
+Una promesa originalmente esta Pendiente. Cuando llamamos a resolve entonces la promesa
+pasa a estar Resuelta, si llamamos a reject pasa a estar Rechazada, usualmente cuando
+es rechazada obtenemos un error que nos va a indicar la razón del rechazo. Cuando una
+promesa se resuelve entonces se ejecuta la función que pasamos al método .then, si la
+promesa es rechazada entonces se ejecuta la función que pasamos a .catch, de esta forma
+podemos controlar el flujo de datos.
+
+Cuando necesitas hacer muchos llamados en los que puedes caer en un callback hell,
+un código complejo y difícil de mantener, para eso existe una solución, Promesas.
+ la promesa es un objeto que representa la terminación o el fracaso de una operación
+  asíncrona. Esencialmente, una promesa es un objeto devuelto al cuál se adjuntan
+   funciones callback, en lugar de pasar callbacks a una función.
+

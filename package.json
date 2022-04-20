@@ -7,7 +7,8 @@
     "callback": "node src/callback/CallBack.js",
     "api": "node src/callback/challenger.js",
     "promesa": "node src/Promise/promise.js",
-    "api2": "node src/Promise/challenger.js"
+    "api2": "node src/Promise/challenger.js",
+    "prueba": "node src/Promise/PRACTICA.js"
   },
   "keywords": [
     "callback",

@@ -3,8 +3,8 @@
 const  apiFer = require('../Util/fetchData');
 // declaramos la ruta de la api
 const API = 'https://rickandmortyapi.com/api/character/';
-const API2 = 'https://jsonplaceholder.typicode.com/users';
-
+const API2 = 'https://jsonplaceholder.typicode.com/users/';
+const API3 = 'https://pokeapi.co/api/v2/pokemon/45/';
 // apiFer(API3)
 //     .then(data =>   {
 //         // imprimimos el numero de personajes
@@ -27,31 +27,18 @@ const API2 = 'https://jsonplaceholder.typicode.com/users';
 //         console.log(err);
 //     })
 
+let p="1";
 
-apiFer(API2)
-    .then(data =>   {
 
-        return apiFer(`${API2}${data.results[2].id}`);
-    })
+
+apiFer(API2 + p)
+
     .then(data => {
-        // esperamos la promesa anterior y vemos el nombre
         console.log(data.name);
-      
-       
-    })
-    .then(data => {
-        // esperamos la promesa anterior y vemos el nombre
-        console.log(data.username);
-      
 
     })
-    .then(data => {
-        // esperamos la promesa anterior y vemos el nombre
-        console.log(data.email);
-      
-       
-    })
-    // si hay error
+
+
     .catch(err => {
         console.log(err);
     })

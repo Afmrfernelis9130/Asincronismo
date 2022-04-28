@@ -1,20 +1,24 @@
 // importamos la funcion
-const fetchData = require('../Util/fetchData');
+// const fetchData = require('../Util/fetchData');
+const  apiFer = require('../Util/fetchData');
+
 // declaramos la ruta de la api
 const API = 'https://rickandmortyapi.com/api/character/';
+const API2 = 'https://jsonplaceholder.typicode.com/users/';
+const API3 = 'https://pokeapi.co/api/v2/pokemon/45/';
 
-fetchData(API)
-    .then(data => {
+apiFer(API3)
+    .then(data =>   {
         // imprimimos el numero de personajes
         console.log(data.info.count);
         // volvemos a hacer la promesa de pedir algo, en este caso el personaje 1: Rick
-        return fetchData(`${API}${data.results[2].id}`);
+        return apiFer(`${API3}${data.results[2].id}`);
     })
     .then(data => {
         // esperamos la promesa anterior y vemos el nombre
         console.log(data.name);
         // volvemos a hacer la promesa, pero esta es sobre la dimension
-        return fetchData(data.origin.url)
+        return apiFer(data.origin.url)
     })
     .then(data => {
         // vemos la dimension de rick
@@ -25,4 +29,18 @@ fetchData(API)
         console.log(err);
     })
 
-df
+// let p="1";
+// apiFer(API2 + p)
+//     .then(data => {
+//         console.log(data.name);
+//
+//     })
+//     .catch(err => {
+//         console.log(err);
+//     })
+//
+//
+
+
+
+//https://jsonplaceholder.typicode.com/users/1

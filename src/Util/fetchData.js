@@ -27,5 +27,38 @@ const fetchData = (url_api) => {
     });
 }
 
+apiFer = (url_api) => {
+    return new Promise((resolve, reject) => {
+
+        const xhttp = new XMLHttpRequest;
+
+        xhttp.open("GET", url_api, true);
+
+        xhttp.onreadystatechange = (() => {
+
+            if (xhttp.readyState === 4) {
+                xhttp.status === 200
+                    ? resolve(JSON.parse(xhttp.responseText))
+                    : reject(new Error("error" + url_api))
+
+
+            }
+
+        });
+
+        xhttp.send()
+
+    });
+
+}
+
+
+
+
+
+
+
 // exportamos la funcion
 module.exports = fetchData;
+
+module.exports = apiFer;

@@ -27,12 +27,13 @@ const fetchData = (url_api) => {
     });
 }
 
-apiFer = (url_api) => {
+const apiFer = (url_api) => {
+
     return new Promise((resolve, reject) => {
 
         const xhttp = new XMLHttpRequest;
 
-        xhttp.open("GET", url_api, true);
+        xhttp.open("GET", url_api , true);
 
         xhttp.onreadystatechange = (() => {
 

@@ -8,12 +8,12 @@ const API2 = 'https://jsonplaceholder.typicode.com/users/';
 const API3 = 'https://pokeapi.co/api/v2/pokemon/45/';
 
 
-// nuestra funcion asíncrona, le devemos pasar la api
-const anotherFunction = async (url_api) => {
+// nuestra funcion asíncrona, le debemos pasar la api
+const anotherFunction = async (API) => {
     // el TryCatch, para que se maneje de manera sincrónica
     try {
-        // esperamos que se aga la primera llamada
-        const data = await fetchData(url_api);
+        // esperamos que se haga la primera llamada
+        const data = await fetchData(API);
 
         // esperamos que se aga la segunda llamada
         const character = await fetchData(`${API}${data.results[0].id}`)
@@ -33,6 +33,11 @@ const anotherFunction = async (url_api) => {
 }
 
 console.log('before');
+
 // mandamos a llamar nuestra api
 anotherFunction(API);
 console.log('After');
+
+
+
+

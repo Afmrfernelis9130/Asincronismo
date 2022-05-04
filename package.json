@@ -1,24 +1,36 @@
 {
   "name": "asincronismos",
   "version": "1.0.0",
-  "description": "",
   "main": "src/index.js",
   "scripts": {
     "callback": "node src/callback/CallBack.js",
-    "api": "node src/callback/challenger.js",
+    "Capi": "node src/callback/challenger.js",
     "promesa": "node src/Promise/promise.js",
-    "api2": "node src/Promise/challenger.js",
+    "Papi": "node src/Promise/challenger.js",
     "async": "node src/Async/async.js",
-    "prueba": "node src/Promise/PRACTICA.js"
+    "Aapi": "node src/Async/challenger.js.js",
+    "practicaA": "node src/Async/practicas.js",
+    "PApi": "node src/Practicas/Fetch.js"
   },
   "keywords": [
     "callback",
     "async",
-    "promise"
+    "promise",
+    "async"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "node-fetch": "^3.2.4",
     "xmlhttprequest": "^1.8.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Afmrfernelis9130/Asincronismo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Afmrfernelis9130/Asincronismo/issues"
+  },
+  "homepage": "https://github.com/Afmrfernelis9130/Asincronismo#readme",
+  "description": ""
 }

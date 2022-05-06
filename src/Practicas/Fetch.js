@@ -4,19 +4,22 @@ const API2 = 'https://jsonplaceholder.typicode.com/users';
 const API3 = 'https:/pokeapi.co/api/v2/pokemon/45/';
 
 
-let array = [];
+
 
 fetch(API2)
 
     .then(response =>
         response.json())
-    .then(data => {
+    .then(data =>mostraDatos(data))
+    .catch(err =>console.log(err))
 
-        array = data;
-
-        let newArray = array.map((a) => a.name);
-
-        console.log(newArray)
+const mostraDatos = (data)=>{
 
 
-    })
+   const list = data.map(a => `<li>${a.name}</li>` )
+
+    document.getElementById("list"). innerHTML=list
+
+}
+
+
